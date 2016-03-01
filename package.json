@@ -1,0 +1,38 @@
+{
+  "name": "expressdi",
+  "version": "1.0.0",
+  "description": "light simple dependency injection for node.js",
+  "main": "lib/expressDI.js",
+  "scripts": {
+    "test": "mocha spec/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfakir/expressdi.git"
+  },
+  "keywords": [
+    "node",
+    "holidays",
+    "feiertage",
+    "javascript"
+  ],
+  "author": {
+    "name": "Simon Fakir"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sfakir/expressdi/issues"
+  },
+  "homepage": "https://github.com/sfakir/expressdi",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "maintainers": [
+    {
+      "name": "sfakir",
+      "email": "simon@fakir-it.de"
+    }
+  ],
+  "directories": {}
+}

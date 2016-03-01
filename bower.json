@@ -1,0 +1,17 @@
+{
+  "name": "feiertagejs",
+  "version": "1.0.0",
+  "main": "lib/expressDI.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "build",
+    "*.md"
+  ],
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  },
+  "keywords": [
+    "javascript", "feiertage", "holidays", "germany"
+  ]
+}
