@@ -19,29 +19,35 @@ expressDI is installable via:
 This script works with Node.js, AMD / RequireJS and directly via script tag.
 
 
-## Quick Examples
+## How it works
+
+Inspired by the zero configuration DI model of angular.js, this model finds the 
+necessary dependencies just based on the filename, like in the following example.
+
+For a full webapplaction example please see this[https://github.com/sfakir/expressDI-full-example]
 
 ```javascript
 
-var options = {
-    root: __dirname,
-    directories: ['app'],
-    debug: true,
-    ignoreFiles: ['_spec'],
-    autoInjects: ['Controller', 'Middleware']
-};
+// file User.js
+module.exports = function() {
+ var model = mongoose.Model('Users');
+ // ...
+ return model;
+}
 
-var di = expressDI.di(options);
-di.run()
-.then(function() {
-    // App is running.
-});
+
+// file UsersController.js
+module.exports = function(User) {
+ // do something with the User
+ 
+}
 
 ```
 
+
 ## ExpressJS Example
 
-
+https://github.com/sfakir/expressDI-full-example
 
 
 # Feedback and Questions
