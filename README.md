@@ -1,4 +1,4 @@
-# Feiertage.js
+# expressDI
 
 [![NPM version](http://img.shields.io/npm/v/async.svg)](https://www.npmjs.org/package/expressDI)
 [![Build Status](https://travis-ci.org/sfakir/feiertagejs.svg?branch=master)](https://travis-ci.org/sfakir/feiertagejs)
@@ -17,22 +17,32 @@ expressDI is installable via:
 
 
 This script works with Node.js, AMD / RequireJS and directly via script tag.
+
+
 ## Quick Examples
 
 ```javascript
 
-var today = new Date(); // now
+var options = {
+    root: __dirname,
+    directories: ['app'],
+    debug: true,
+    ignoreFiles: ['_spec'],
+    autoInjects: ['Controller', 'Middleware']
+};
 
-feiertagejs.isHoliday( today, 'BW');
-// probably false, because you are working ;)
-
-
-feiertagejs.getHolidays( 2015, 'BW');
-// returns an array of Holidays as date objects
-// Array [ Date, Date, Date, ... ]
-// [ Fri Apr 03 2015 00:00:00 GMT+0200 (CEST),  Fri Dec 25 2015 00:00:00 GMT+0100 (CET), ...]
+var di = expressDI.di(options);
+di.run()
+.then(function() {
+    // App is running.
+});
 
 ```
+
+## ExpressJS Example
+
+
+
 
 # Feedback and Questions
 

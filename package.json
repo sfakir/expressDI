@@ -34,5 +34,8 @@
       "email": "simon@fakir-it.de"
     }
   ],
-  "directories": {}
+  "directories": {},
+  "dependencies": {
+    "bluebird": "^3.3.3"
+  }
 }

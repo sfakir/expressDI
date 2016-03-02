@@ -1,5 +1,8 @@
+'use strict';
+//import di from "../lib/expressDI";
 
-var injector = require('../lib/injector.js');
+
+var expressDI = require('../lib/expressDi');
 var expect = require('chai').expect;
 // https://de.wikipedia.org/wiki/Feiertage_in_Deutschland
 
@@ -10,9 +13,18 @@ describe("DI container loads files:", function () {
 
 
     it("di container should start up", function () {
+        var di = expressDI.di({
+            root: __dirname,
+            directories:['testApp']
+        });
 
-        //expect(result).to.be.an('array');
-        //expect(result).to.have.length(12);
+        di.run()
+            .then(function() {
+                expect(di.isRegistered('App')).to.equal(true);
+                expect(di.isRegistered('TestController')).to.equal(true);
+                expect(di.isRegistered('notExistingController')).to.equal(false);
+            });
+
     });
 
     //it("should be an array", function () {
