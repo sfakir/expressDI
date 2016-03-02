@@ -12,8 +12,8 @@
   },
   "keywords": [
     "node",
-    "holidays",
-    "feiertage",
+    "dependency injection",
+    "IoC",
     "javascript"
   ],
   "author": {
@@ -36,6 +36,8 @@
   ],
   "directories": {},
   "dependencies": {
-    "bluebird": "^3.3.3"
+    "bluebird": "^3.3.3",
+    "globby": "^4.0.0",
+    "lodash": "^4.5.1"
   }
 }
