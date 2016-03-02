@@ -7,13 +7,11 @@
 expressDI ist a leightweight dependency injector written in ES2015 for small to medium
 sized node.js projects.
 
-Use with [Node.js](http://nodejs.org) and installable via `npm install expressDI`,
-
 
 expressDI is installable via:
 
 
-- [npm](http://npm.io/): `npm install expressDI`
+- [npm](http://npm.io/): `npm install expressdi`
 
 
 This script works with Node.js, AMD / RequireJS and directly via script tag.
@@ -27,6 +25,13 @@ necessary dependencies just based on the filename, like in the following example
 For a full webapplaction example please see this[https://github.com/sfakir/expressDI-full-example]
 
 ```javascript
+
+// file index.js
+var expressDI = require('expressdi');
+var di = expressDI.di();
+di.run();
+
+
 
 // file User.js
 module.exports = function() {
@@ -48,6 +53,27 @@ module.exports = function(User) {
 ## ExpressJS Example
 
 https://github.com/sfakir/expressDI-full-example
+
+
+# Configuration
+
+## 
+```javascript
+
+
+var defaultOptions = {
+        root: path.dirname(require.main.filename), // main app.js
+        directories: ['app'], // directories to find source code
+        debug: false, // debug mode (high logging)
+        ignoreFiles: ['_spec'], // ignore all files containing this keyword(s)
+        autoload: ['Controller', 'Middleware'] // autoload files containing this keyword(s), so called 'defaults'
+    }
+
+var expressDI = require('expressdi');
+var di = expressDI.di(defaultOptions);
+
+
+```
 
 
 # Feedback and Questions
